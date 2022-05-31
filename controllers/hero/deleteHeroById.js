@@ -1,4 +1,4 @@
-const { removeHero } = require("../../model/hero/index");
+const { removeHero } = require('../../model/hero/index');
 
 const deleteHeroById = async (req, res, next) => {
   try {
@@ -6,16 +6,16 @@ const deleteHeroById = async (req, res, next) => {
     const result = await removeHero(heroId);
     if (!result) {
       res.status(404).json({
-        status: "error",
+        status: 'error',
         code: 404,
-        message: "Not found",
+        message: 'Not found',
       });
       return;
     }
     res.json({
-      status: "success",
+      status: 'success',
       code: 200,
-      message: "Remove success",
+      message: 'Remove success',
     });
   } catch (error) {
     next(error);

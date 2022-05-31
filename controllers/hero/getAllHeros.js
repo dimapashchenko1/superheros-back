@@ -1,4 +1,4 @@
-const { listHero } = require("../../model/hero/index");
+const { listHero } = require('../../model/hero/index');
 
 const getAllHeros = async (req, res) => {
   try {
@@ -6,9 +6,9 @@ const getAllHeros = async (req, res) => {
     console.log(heros);
 
     res.json({
-      status: "success",
+      status: 'success',
       code: 200,
-      data:  heros ,
+      data: heros,
     });
   } catch (error) {
     next(error);

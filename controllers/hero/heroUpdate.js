@@ -1,4 +1,4 @@
-const { updateHero } = require("../../model/hero/index");
+const { updateHero } = require('../../model/hero/index');
 
 const heroUpdate = async (req, res, next) => {
   try {
@@ -6,22 +6,22 @@ const heroUpdate = async (req, res, next) => {
     const result = await updateHero(heroId, req.body);
     if (!heroId) {
       res.status(404).json({
-        status: "error",
+        status: 'error',
         code: 404,
-        message: "Not found",
+        message: 'Not found',
       });
       return;
     }
     if (!result) {
       res.status(400).json({
-        status: "error",
+        status: 'error',
         code: 400,
-        message: "Missing field",
+        message: 'Missing field',
       });
       return;
     }
     res.json({
-      status: "success",
+      status: 'success',
       code: 200,
       data: {
         result,

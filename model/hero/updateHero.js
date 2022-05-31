@@ -1,10 +1,10 @@
-const { Superheros } = require("../../schema/superheroModel");
+const { Superheros } = require('../../schema/superheroModel');
 
 const updateHero = async (heroId, body) => {
   const getHeroById = await Superheros.findOneAndUpdate(
     { heroId },
     { ...body },
-    { new: true }
+    { new: true },
   );
   return getHeroById;
 };

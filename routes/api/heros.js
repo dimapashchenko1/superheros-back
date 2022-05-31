@@ -1,18 +1,18 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 const {
   getAllHeros,
   deleteHeroById,
   addNewHero,
   heroUpdate,
-} = require("../../controllers/hero");
+} = require('../../controllers/hero');
 
-router.get("/", getAllHeros);
+router.get('/', getAllHeros);
 
-router.post("/", addNewHero);
+router.post('/', addNewHero);
 
-router.delete("/:heroId", deleteHeroById);
+router.delete('/:heroId', deleteHeroById);
 
-router.put("/:heroId", heroUpdate);
+router.put('/:heroId', heroUpdate);
 
 module.exports = router;

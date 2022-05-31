@@ -1,4 +1,4 @@
-const { Superheros } = require("../../schema/superheroModel");
+const { Superheros } = require('../../schema/superheroModel');
 
 const listHero = async () => {
   const allHeros = await Superheros.find({});
